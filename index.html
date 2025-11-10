@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Spreadsheet (Statik)</title>
+  <style>
+ /* CSS BARU UNTUK WARNA BARIS 1 */
+ .row-highlight {
+   background-color: #fce8e6 !important; /* Warna Latar Baris 1 */
+   font-weight: 700;
+ }
+ .row-highlight .row-header {
+ background-color: #f0c4c4 !important; /* Warna Latar Baris Header No */
+ }
+ .row-highlight .cell-input {
+   background-color: #fce8e6 !important; 
+   font-weight: 900;
+ }
+ /* Sisa CSS (Sama seperti sebelumnya) */
+ body {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: 'Arial', sans-serif;
+   background: #f8f9fa;
+   height: 100%;
+   overflow: hidden;
+ }
+ * {
+   box-sizing: border-box;
+ }
+ .container {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   background: #ffffff;
+ }
+ .header {
+   background: #ffffff;
+   border-bottom: 1px solid #e0e0e0;
+   padding: 12px 16px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 16px;
+ }
+ .title-section {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   flex: 1;
+ }
+ .sheet-icon {
+   width: 32px;
+   height: 32px;
+   fill: #0f9d58;
+ }
+ .sheet-title {
+   font-size: 18px;
+   font-weight: 500;
+   color: #202124;
+ }
+    /* Gaya Elegan untuk Tombol Info */
+    .info-icon-btn {
+      background: none; 
+      color: #1a73e8; /* Biru Google yang elegan */
+      border: 1px solid #dadce0;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex; 
+      align-items: center;
+      gap: 6px;
+    }
+    .info-icon-btn:hover {
+      background: #f1f3f4;
+      border-color: #c6c6c6;
+    }
+    /* Ikon Info menggunakan Unicode */
+    .info-icon-btn::before {
+        content: 'ⓘ'; /* Ikon i besar */
+        font-size: 16px;
+    }
+    /* Menghapus gaya download-btn karena sudah tidak terpakai */
+ .toolbar {
+   background: #ffffff;
+   border-bottom: 3px solid #e4e4e4;
+   padding: 8px 16px;
+   display: flex;
+   gap: 8px;
+   align-items: center;
+   position: sticky;
+   top: 0;
+   z-index: 100;
+ }
+ .search-input {
+   flex: 1;
+   max-width: 400px;
+   padding: 8px 12px;
+   border: 1px solid #dadce0;
+   border-radius: 4px;
+   font-size: 13px;
+   font-family: 'Arial', sans-serif;
+   outline: none;
+ }
+ .search-input:focus {
+   border-color: #1a73e8;
+   box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.1);
+ }
+ .toolbar-btn {
+   background: white;
+   border: 1px solid #dadce0;
+   padding: 6px 12px;
+   border-radius: 4px;
+   font-size: 13px;
+   cursor: pointer;
+   transition: all 0.2s;
+ }
+ .toolbar-btn:hover {
+   background: #f1f3f4;
+   border-color: #c6c6c6;
+ }
+ .search-result {
+   font-size: 13px;
+   color: #5f6368;
+   margin-left: 12px;
+ }
+ .highlight {
+   background-color: #fff59d !important;
+ }
+ .spreadsheet-wrapper {
+   flex: 1;
+   overflow-y: scroll;
+   overflow-x: auto;
+   padding: 16px;
+   background: #f8f9fa;
+ }
+ .spreadsheet {
+   background: white;
+   border: 1px solid #e0e0e0;
+   display: inline-block;
+   min-width: 100%;
+ }
+ .spreadsheet-table {
+   border-collapse: collapse;
+   width: 100%;
+ }
+ .row-header {
+   background: #f8f9fa;
+   border: 1px solid #e0e0e0;
+   text-align: center;
+   font-size: 12px;
+   color: #5f6368;
+   font-weight: 500;
+   width: 40px;
+   min-width: 40px;
+   padding: 8px 4px;
+   user-select: none;
+ }
+ .col-header {
+   background: #f8f9fa;
+   border: 1px solid #e0e0e0;
+   text-align: center;
+   font-size: 12px;
+   color: #5f6368;
+   font-weight: 500;
+   padding: 8px;
+   user-select: none;
+ }
+ .cell {
+   border: 1px solid #e0e0e0;
+   padding: 0;
+   position: relative;
+   height: 32px;
+ }
+ .cell-input {
+   width: 100%;
+   height: 100%;
+   border: none;
+   padding: 8px;
+   font-size: 13px;
+   font-family: 'Arial', sans-serif;
+   background: transparent;
+   outline: none;
+   cursor: default; 
+   text-align: center; 
+ }
+ .corner-cell {
+   background: #f8f9fa;
+   border: 1px solid #e0e0e0;
+   width: 40px;
+   min-width: 40px;
+   font-size: 12px;
+   color: #5f6368;
+   font-weight: 600;
+ }
+ .toast {
+   position: fixed;
+   bottom: 24px;
+   left: 50%;
+   transform: translateX(-50%);
+   background: #323232;
+   color: white;
+   padding: 12px 24px;
+   border-radius: 4px;
+   font-size: 14px;
+   opacity: 0;
+   transition: opacity 0.3s;
+   z-index: 1001;
+   pointer-events: none;
+ }
+ .toast.show {
+   opacity: 1;
+ }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+ <div class="header">
+   <div class="title-section">
+ <svg class="sheet-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" /></svg>
+ <span class="sheet-title">DATA GAJI SAHABAT KITA</span>
+   </div>
+      <button class="info-icon-btn" onclick="showAgencyInfo()">INFO AGENSI</button>
+ </div>
+    
+ <div class="toolbar">
+   <input type="text" id="searchInput" class="search-input" placeholder="Cari data...">
+   <button class="toolbar-btn" onclick="searchData()">Cari Data</button>
+   <button class="toolbar-btn" onclick="clearSearch()">Batal Cari</button> 
+   <span id="searchResult" class="search-result"></span>
+ </div>
+    
+ <div class="spreadsheet-wrapper">
+   <div class="spreadsheet" id="spreadsheet">
+ <table class="spreadsheet-table" id="spreadsheetTable">
+   <thead>
+  <tr id="headerRow">
+    <th class="corner-cell">NO</th>
+  </tr>
+   </thead>
+   <tbody id="tableBody">
+   </tbody>
+ </table>
+   </div>
+ </div>
+  </div>
+  
+  <div class="toast" id="toast"></div>
+
+  <script>
+ // ========================================
+ // 🚩 AREA UNTUK MENGEDIT DATA SECARA DETAIL PER SEL 🚩
+ // ========================================
+
+ // 1. ATUR LEBAR KOLOM DI SINI
+ const COLUMN_WIDTHS = {
+ 0: '160px',  // Kolom A
+ 1: '150px',   // Kolom B
+ 2: '150px',  // Kolom C
+ 3: '150px',  // Kolom D
+ 4: '150px',  // Kolom E
+ 5: '150px',  // Kolom F
+ 6: '150px',  // Kolom G
+ 7: '150px',  // Kolom H
+ 8: '150px',  // Kolom I
+ 9: '150px',  // Kolom J
+ 10: '150px', // Kolom K
+ 11: '150px',  // Kolom L
+ 12: '150px',  // Kolom M
+ 13: '150px',  // Kolom N
+ 14: '150px',  // Kolom O
+ // Tambahkan lebih banyak pengaturan di sini. Default adalah 100px
+ };
+
+
+ /**
+  * 2. UBAH DATA DI SINI.
+  */
+ const dataGrid = [
+   // BARIS 1 (A1 hingga O1) - HEADER DATA
+   ['NOMOR HP / WA ', 'ID FAYA', 'NAMA FAYA','TARGET COIN','TARGET DIAMOND','RP COIN','RP DIAMOND','BONUS','DOLAR $','COIN CONUS','TOTAL RP','NOMOR REG','AKUN REG','NAMA REG','STATUS FAYA' /* Tambahkan data lainnya hingga kolom Z */],
+   
+   // BARIS 2 (A2 hingga O2)
+   ['+628123456789', 'FAYA001', 'Budi Santoso', '1000', '50', '100K', '5K', '10', '1.5', '20', '106.5K', 'REG001', 'Akun Budi', 'Budi REG', 'Aktif'],
+   
+   // BARIS 3 (A3 hingga O3)
+   ['+628567890123', 'FAYA002', 'Citra Dewi', '500', '20', '50K', '2K', '5', '0.75', '10', '52.75K', 'REG002', 'Akun Citra', 'Citra REG', 'Pending'],
+   
+   // BARIS 4 (A3 hingga O3)
+   ['+628567890123', 'FAYA002', 'Citra Dewi', '500', '20', '50K', '2K', '5', '0.75', '10', '52.75K', 'REG002', 'Akun Citra', 'Citra REG', 'Pending'],
+   
+   // BARIS 5 (A3 hingga O3)
+   ['+628567890123', 'FAYA002', 'Citra Dewi', '500', '20', '50K', '2K', '5', '0.75', '10', '52.75K', 'REG002', 'Akun Citra', 'Citra REG', 'Pending'],
+   
+   // BARIS 7 (A3 hingga O3)
+   ['+628567890123', 'FAYA002', 'Citra Dewi', '500', '20', '50K', '2K', '5', '0.75', '10', '52.75K', 'REG002', 'Akun Citra', 'Citra REG', 'Pending'],
+   
+   // BARIS 7 (A3 hingga O3)
+   ['+628567890123', 'FAYA002', 'Citra Dewi', '500', '20', '50K', '2K', '5', '0.75', '10', '52.75K', 'REG002', 'Akun Citra', 'Citra REG', 'Pending'],
+   
+   // BARIS 8 (A3 hingga O3)
+   ['+628567890123', 'FAYA002', 'Citra Dewi', '500', '20', '50K', '2K', '5', '0.75', '10', '52.75K', 'REG002', 'Akun Citra', 'Citra REG', 'Pending'],
+   
+   // ... TAMBAHKAN BARIS LAIN HINGGA 100 ...
+ ];
+
+ // ------------------------------------------
+ // JANGAN UBAH KODE DI BAWAH INI
+ // ------------------------------------------
+
+ // Otomatis mendapatkan jumlah baris dan kolom dari dataGrid
+ let rows = dataGrid.length;
+ let cols = dataGrid.length > 0 ? dataGrid[0].length : 0;
+    
+ function getColumnName(index) {
+   let name = '';
+   while (index >= 0) {
+ name = String.fromCharCode(65 + (index % 26)) + name;
+ index = Math.floor(index / 26) - 1;
+   }
+   return name;
+ }
+
+ function initializeSpreadsheet() {
+   const headerRow = document.getElementById('headerRow');
+   const tableBody = document.getElementById('tableBody');
+
+   // Membuat Header Kolom (A, B, C...)
+   headerRow.innerHTML = '<th class="corner-cell">No</th>';
+   for (let c = 0; c < cols; c++) {
+ const th = document.createElement('th');
+ th.className = 'col-header';
+ th.textContent = getColumnName(c);
+  
+ // Menerapkan Lebar Kolom
+ const width = COLUMN_WIDTHS[c] || '100px'; 
+ th.style.minWidth = width;
+
+ headerRow.appendChild(th);
+   }
+
+   // Membuat Baris dan Sel
+   tableBody.innerHTML = '';
+   
+   for (let r = 0; r < rows; r++) {
+ const tr = document.createElement('tr');
+  
+ // MENAMBAHKAN WARNA PADA BARIS PERTAMA (r === 0)
+ if (r === 0) {
+  tr.classList.add('row-highlight');
+ }
+  
+ const rowHeader = document.createElement('td');
+ rowHeader.className = 'row-header';
+ rowHeader.textContent = r + 1;
+ tr.appendChild(rowHeader);
+
+ for (let c = 0; c < cols; c++) {
+   const td = document.createElement('td');
+   td.className = 'cell';
+   
+   // Menerapkan Lebar Kolom pada Sel
+   const width = COLUMN_WIDTHS[c] || '100px'; 
+   td.style.minWidth = width;
+
+   const input = document.createElement('input');
+   input.type = 'text';
+   input.className = 'cell-input';
+   input.dataset.row = r;
+   input.dataset.col = c;
+   
+   input.value = (dataGrid[r] && dataGrid[r][c] !== undefined) ? dataGrid[r][c] : '';
+   input.readOnly = true; 
+   
+   td.appendChild(input);
+   tr.appendChild(td);
+ }
+
+ tableBody.appendChild(tr);
+   }
+ }
+
+    // ========================================
+    // FUNGSI UTAMA: MENAMPILKAN INFO AGENSI
+    // ========================================
+    function showAgencyInfo() {
+        const infoMessage = `
+SELAMAT DATANG DI AGENCY SAHABAT KITA
+=========================================
+
+JADWAL ADMIN LIVE (OFC)
+• JAM 07.00 - 10.00
+• JAM 10.00 - 13.00
+• JAM 13.00 - 16.00
+• JAM 16.00 - 19.00
+• JAM 19.00 - 22.00
+
+*JADWAL ADMIN LIVE (NAMA)*
+• AZRIL   : 07.00 - 10.00
+• NELFI   : 10.00 - 13.00
+• NELFI   : 13.00 - 16.00
+• AZRIL   : 16.00 - 19.00
+• AROW   : 19.00 - 22.00
+(Jam 23 / 24 itu bebas Admin RUM)
+(Jam 01 / 06 OFF LIVE)
+
+=========================================
+
+*PERSYARATAN OPEN ADMIN*
+• MINIMAL KEKAYAN LEVEL 11
+• HAPAL RULES
+• PINTAR BERBICARA
+
+=========================================
+
+*BONUS JOIN AGENCY*
+• ANGOTA AKTIF BONUS 2% (Min. di RUM Agency 1/2 jam)
+• ANGOTA GIF RUM AGENCY 3% (Cashback koin diberikan jam 00.00)
+• SERING CEK IN FAMELI BONUS MINGGU AKTIF 1.000 GIF / 2.000 GIF
+
+=========================================
+
+*TARGET BONUS MEMBER BARU* ⛔
+_Hanya untuk member pertama join agency._
+• TARGET 50K  -> BONUS GIF 5.000
+• TARGET 150  -> BONUS GIF 10.00
+• TARGET 250K -> BONUS GIF 20.000
+
+=========================================
+
+*BONUS PUSH TARGET*
+• 400K    : 5.000 C = Rp 2.000
+• 550K    : 10.000 C = Rp 5.000
+• 750K    : 15.000 C = Rp 9.000
+• 1,100 M : 20.000 C = Rp 15.000
+*COIN INI BISA JADI UANG JIKA KALIAN TIDAK MAU COIN.*
+        `;
+        alert(infoMessage.trim());
+    }
+
+    // Fungsi Pencarian
+    function searchData() {
+   const searchInput = document.getElementById('searchInput');
+   const searchTerm = searchInput.value.trim().toLowerCase();
+   const searchResult = document.getElementById('searchResult');
+   
+   if (!searchTerm) {
+ showToast('Masukkan kata kunci pencarian');
+ return;
+   }
+
+   clearSearch();
+
+   const inputs = document.querySelectorAll('.cell-input');
+   let foundCount = 0;
+   let firstMatch = null;
+
+   inputs.forEach(input => {
+ const value = input.value.toLowerCase();
+ if (value.includes(searchTerm)) {
+   input.classList.add('highlight');
+   foundCount++;
+   if (!firstMatch) {
+  firstMatch = input;
+   }
+ }
+   });
+
+   if (foundCount > 0) {
+ searchResult.textContent = `Ditemukan ${foundCount} hasil`;
+ if (firstMatch) {
+   firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+ }
+ showToast(`Ditemukan ${foundCount} hasil`);
+   } else {
+ searchResult.textContent = 'Tidak ada hasil';
+ showToast('Tidak ada hasil ditemukan');
+   }
+ }
+
+ function clearSearch() {
+   const inputs = document.querySelectorAll('.cell-input');
+   inputs.forEach(input => {
+ input.classList.remove('highlight');
+   });
+   document.getElementById('searchResult').textContent = '';
+   document.getElementById('searchInput').value = ''; 
+ }
+
+ document.getElementById('searchInput').addEventListener('keypress', function(e) {
+   if (e.key === 'Enter') {
+ searchData();
+   }
+ });
+
+ function showToast(message) {
+   const toast = document.getElementById('toast');
+   toast.textContent = message;
+   toast.classList.add('show');
+   setTimeout(() => {
+ toast.classList.remove('show');
+   }, 2000);
+ }
+
+ initializeSpreadsheet();
+  </script>
+</body>
+</html>
