@@ -28,11 +28,11 @@ const COLUMN_WIDTHS = {
  */
 const dataGrid = [
     // BARIS 1 (A1 hingga O1) - HEADER DATA
-    ['NOMOR HP / WA ', 'ID FAYA', 'NAMA FAYA', 'TARGET COIN', 'TARGET DIAMOND', 'RP COIN', 'RP DIAMOND', 'BONUS', 'DOLAR $', 'COIN BONUS', 'TOTAL RP', 'NOMOR REG', 'AKUN REG', 'NAMA REG', 'STATUS FAYA' /* Tambahkan data lainnya hingga kolom Z */],
+    ['NOMOR HP / WA ', 'ID FAYA', 'NAMA FAYA', 'TARGET COIN', 'TARGET DIAMOND', 'RP COIN', 'RP DIAMOND', 'BONUS', 'DOLAR $', 'RP / COIN BONUS', 'TOTAL RP', 'NOMOR REG', 'AKUN REG', 'NAMA REG', 'STATUS FAYA' /* Tambahkan data lainnya hingga kolom Z */],
 
     
     // BARIS 2 (A2 hingga O2)
-    ['+62 838 3203 2264', '10084043', 'ꜱ͜͡ᴋᴬ ᭼Azril', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', '0', 'Rp 0', '083832032264', 'DANA', 'Khairul Azri', 'Anggota'],
+    ['+62 838 3203 2264', '10084043', 'ꜱ͜͡ᴋᴬ ᭼Azril', '250.000', '250.000', 'Rp 45.000', 'Rp 45.000', 'Rp 10.000', '$ : Rp 0', '0', 'Rp 10.000', '083832032264', 'DANA', 'Khairul Azri', 'Anggota'],
 
     
     // BARIS 3 (A3 hingga O3)
@@ -48,7 +48,7 @@ const dataGrid = [
 
     
     // BARIS 6 (A6 hingga 06)
-    ['+62 821 9703 4360', '10087223', 'ꜱ͜͡ᴋᴬ ᭼Siska', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '082197034360', 'DANA', 'Reski hasanah', 'Anggota'],
+    ['+62 821 9703 4360', '10087223', 'ꜱ͜͡ᴋᴬ ᭼Siska', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '-', '-', '-', 'Anggota'],
 
     
     // BARIS 7 (A7 hingga 07)
@@ -91,10 +91,10 @@ const dataGrid = [
     
 
     // BARIS 9 (A9 hingga O9)
-    ['+62 821 7207 0365', '10030779', 'ꜱ͜͡ᴋᴬ ᭼Asuwi⚔️', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', '0', 'Rp 0', '-', '-', '-', '-'],
-
+    ['+62 821 7207 0365', '10030779', 'ꜱ͜͡ᴋᴬ ᭼Asuwi⚔️', '150.000', '150.000', 'Rp 25.000', 'Rp 25.000', 'Rp 16.000','$ : Rp 0', 'GIF 3.000', 'Rp 66.000', '-', '-', '-', 'Admin Room'],
+    
     // BARIS OWNER (A100 hingga 100)
-    ['+62 896 4677 5883', '10026365', 'ꜱ͜͡ᴋᴬ ᭼Arow', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', '0', 'Rp 0', '089646775883', 'DANA', 'Wi**** H*** M****', 'OWNER SKA'],
+    ['+62 896 4677 5883', '10026365', 'ꜱ͜͡ᴋᴬ ᭼Arow', '550.000', '550.000', 'Rp 100.000', 'Rp 100.000', 'Rp 39.000', '$ : Rp 0', 'Rp.6.000', 'Rp 239.000', '089646775883', 'DANA', 'Wi**** H*** M****', 'OWNER SKA'],
     
     // ... TAMBAHKAN BARIS LAIN HINGGA 100 ...
 ];
