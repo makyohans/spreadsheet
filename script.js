@@ -31,58 +31,64 @@ const dataGrid = [
     ['NOMOR HP / WA ', 'ID FAYA', 'NAMA FAYA', 'TARGET COIN', 'TARGET DIAMOND', 'RP COIN', 'RP DIAMOND', 'BONUS', 'DOLAR $', 'RP / COIN BONUS', 'TOTAL RP', 'NOMOR REG', 'AKUN REG', 'NAMA REG', 'STATUS FAYA' /* Tambahkan data lainnya hingga kolom Z */],
 
     
-    // BARIS 3 (A3 hingga O3)
+    // BARIS 2 (A3 hingga O3)
     ['+853 6653 2440', '10067655', 'ꜱ͜͡ᴋᴬ ᭼Candy', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', '0', 'Rp 0', '085267348782', 'DANA', 'Esti Septiani', 'Anggota'],
 
     
-    // BARIS 5 (A5 hingga O5)
+    // BARIS 3 (A5 hingga O5)
     ['+62 851 9803 3804', '10015083', 'ꜱ͜͡ᴋᴬ ᭼Nelfi', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', 'Rp 0', 'Rp 0', '082298428493', 'DANA', 'Yunelfi', 'Super Admin / Rp 2.000'],
 
     
-    // BARIS 6 (A6 hingga O6)
+    // BARIS 4 (A6 hingga O6)
     ['+62 831 6828 6042', '10085046', 'ꜱ͜͡ᴋᴬ ᭼𝐒ɦα𝗂𝗋α', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', '0', 'Rp 0', '083839419665', 'DANA', 'kas125', 'Anggota'],
 
     
-    // BARIS 7 (A7 hingga 07)
+    // BARIS 5 (A7 hingga 07)
     ['+62 878 2624 7644', '10065906', 'ꜱ͜͡ᴋᴬ ᭼🍀DuduLLz🍀', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '082119792181', 'DANA', 'INEU SETIAWATI', 'Angota'],
 
     
-    // BARIS 8 (A8 hingga 08)
+    // BARIS 6 (A7 hingga 07)
+    ['+62 812 6933 0165', '10069203', 'ꜱ͜͡ᴋᴬ ᭼W҉A҉H҉Y҉O҉E҉"', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '081269330165', 'DANA', 'MENANTIUS LAFAU', 'Angota'],
+
+    
+    // BARIS 7 (A8 hingga 08)
     ['+62 882 9471 5902', '10029550', 'ꜱ͜͡ᴋᴬ ᭼AGUNG', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '088294715902', 'DANA', 'AGUNG SUWANDI', 'Angota'],
 
     
-    // BARIS 10 (A10 hingga 10)
+    // BARIS 8 (A10 hingga 10)
     ['+62 823 5944 5110', '10112534', 'ꜱ͜͡ᴋᴬ ᭼𝐕𝗲𝗻𝗼𝐌', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '082359445110', 'DANA', 'Yek yagil ', 'Angota'],
 
     
-    // BARIS 11 (A11 hingga 11)
+    // BARIS 9 (A11 hingga 11)
     ['+62 812 4683 7174', '10076638', 'ꜱ͜͡ᴋᴬ ᭼Salsa hangeul', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '082276671001', 'GoPay', 'Nur istifadah', 'Super Admin / Rp 2.000'],
 
     
-    // BARIS 12 (A12 hingga 12)
+    // BARIS 10 (A12 hingga 12)
     ['+62 831 8857 3803', '10098483', 'ꜱ͜͡ᴋᴬ ᭼Tika', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', '0', 'Rp 0', '083178112886', 'GoPay', 'Dewi kartika', 'Anggota'],
 
     
-    // BARIS 13 (A13 hingga 13)
+    // BARIS 11 (A13 hingga 13)
     ['+62 852 4998 7044', '10112418', 'ꜱ͜͡ᴋᴬ ᭼爱|•sᴀɴᴊɪッ', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '085249987044', 'ShopeePay', 'MUHAMMAD RIFAI', 'Angota'],
 
     
-    // BARIS 14 (A14 hingga 14)
+    // BARIS 12 (A14 hingga 14)
     ['+62 812 6470 1180', '10027528', 'ꜱ͜͡ᴋᴬ ᭼buaya cuek', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', '0', 'Rp 0', '2970638566', 'BCA', 'Liya Fitriani', 'Anggota'],
 
     
-    // BARIS 15 (A15 hingga 15)
+    // BARIS 13 (A15 hingga 15)
     ['+62 822 5812 7459', '10084725', 'ꜱ͜͡ᴋᴬ ᭼£lsa', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', '0', '0', '204301012055508', 'BRI', 'Elsa tri wahyuni', 'Anggota'],
 
 
 
+    ['+62 821 7207 0365', '10053588', 'ꜱ͜͡ᴋᴬ ᭼Ocol Asuwi"', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '-', '-', '-', 'Anggota'],
+    
     
     ['+62 821 7207 0365', '10087223', 'ꜱ͜͡ᴋᴬ ᭼Siska', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '-', '-', '-', 'Anggota'],
 
-    // BARIS 9 (A9 hingga O9)
-    ['+62 821 7207 0365', '10030779', 'ꜱ͜͡ᴋᴬ ᭼Asuwi⚔️', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0','$ : Rp 0', '0', 'Rp 0', '-', '-', '-', 'Admin Room'],
     
-    // BARIS OWNER (A100 hingga 100)
+    ['+62 821 7207 0365', '10030779', 'ꜱ͜͡ᴋᴬ ᭼Asuwi⚔️', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0','$ : Rp 0', '0', 'Rp 0', '-', '-', '-', 'Admin Room'],
+
+    
     ['+62 896 4677 5883', '10026365', 'ꜱ͜͡ᴋᴬ ᭼Arow', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', 'Rp 0', 'Rp 0', '089646775883', 'DANA', 'Wi**** H*** M****', 'OWNER SKA'],
     
     // ... TAMBAHKAN BARIS LAIN HINGGA 100 ...
