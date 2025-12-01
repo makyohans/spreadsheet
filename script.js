@@ -56,7 +56,7 @@ const dataGrid = [
 
     
     // BARIS 11 (A11 hingga 11)
-    ['+62 812 4683 7174', '10076638', 'ꜱ͜͡ᴋᴬ ᭼Salsa hangeul', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', 'GIF 3.000', 'Rp 66.000 + SA 2.000 = Rp 68.000', '082276671001', 'GoPay', 'Nur istifadah', 'Super Admin / Rp 2.000'],
+    ['+62 812 4683 7174', '10076638', 'ꜱ͜͡ᴋᴬ ᭼Salsa hangeul', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '082276671001', 'GoPay', 'Nur istifadah', 'Super Admin / Rp 2.000'],
 
     
     // BARIS 12 (A12 hingga 12)
