@@ -71,14 +71,18 @@ const dataGrid = [
     ['+62 852 4998 7044', '10112418', 'ꜱ͜͡ᴋᴬ ᭼爱|•sᴀɴᴊɪッ', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '085249987044', 'ShopeePay', 'MUHAMMAD RIFAI', 'Angota'],
 
     
-    // BARIS 12 (A14 hingga 14)
+    // BARIS 12 (A12 hingga 12)
+    ['+62 858 4640 2435', '10083600', 'ꜱ͜͡ᴋᴬ ᭼Luber♡', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', '0', 'Rp 0', '089520373882', 'LinkAja', 'Septian noval setia', 'Anggota'],
+
+    
+    // BARIS 13 (A13 hingga 13)
     ['+62 812 6470 1180', '10027528', 'ꜱ͜͡ᴋᴬ ᭼buaya cuek', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', '0', 'Rp 0', '2970638566', 'BCA', 'Liya Fitriani', 'Anggota'],
 
     
-    // BARIS 13 (A15 hingga 15)
+    // BARIS 14 (A14 hingga 14)
     ['+62 822 5812 7459', '10084725', 'ꜱ͜͡ᴋᴬ ᭼£lsa', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', '0', 'Rp 0', '204301012055508', 'BRI', 'Elsa tri wahyuni', 'Anggota'],
 
-
+    
 
     ['+62 821 7207 0365', '10053588', 'ꜱ͜͡ᴋᴬ ᭼Ocol Asuwi"', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '-', '-', '-', 'Anggota'],
     
