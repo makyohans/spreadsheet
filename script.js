@@ -36,7 +36,7 @@ const dataGrid = [
 
     
     // BARIS 3 (A5 hingga O5)
-    ['+62 851 9803 3804', '10015083', 'ꜱ͜͡ᴋᴬ ᭼Nelfi', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', 'Rp 0', 'Rp 0', '082298428493', 'DANA', 'Yunelfi', 'Super Admin / Rp 2.000'],
+    ['+62 851 9803 3804', '10015083', 'ꜱ͜͡ᴋᴬ᭼ Nelfi🥀✯⃟»𝙰"', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', '$ : Rp 0', 'Rp 0', 'Rp 0', '082298428493', 'DANA', 'Yunelfi', 'Super Admin / Rp 2.000'],
 
     
     // BARIS 4 (A6 hingga O6)
