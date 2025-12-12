@@ -28,7 +28,7 @@ const COLUMN_WIDTHS = {
  */
 const dataGrid = [
     // BARIS 1 (A1 hingga O1) - HEADER DATA
-    ['NOMOR HP / WA ', 'ID FAYA', 'NAMA FAYA', 'TARGET COIN', 'TARGET DIAMOND', 'RP COIN', 'RP DIAMOND', 'BONUS', 'DOLAR $', 'RP / COIN BONUS', 'TOTAL RP', 'NOMOR REG', 'AKUN REG', 'NAMA REG', 'STATUS FAYA' /* Tambahkan data lainnya hingga kolom Z */],
+    ['NOMOR HP / WA ', 'ID FAYA', 'NAMA FAYA', 'TARGET COIN', 'TARGET DIAMOND', 'RP COIN', 'RP DIAMOND', 'BONUS', 'DOLAR $', 'RP BONUS ROOM SKA', 'TOTAL RP', 'NOMOR REG', 'AKUN REG', 'NAMA REG', 'STATUS FAYA' /* Tambahkan data lainnya hingga kolom Z */],
 
     
     // BARIS 2 (A3 hingga O3)
@@ -56,7 +56,7 @@ const dataGrid = [
 
     
     // BARIS 8 (A10 hingga 10)
-    ['+62 823 5944 5110', '10112534', 'ꜱ͜͡ᴋᴬ ᭼𝐂𝗶𝗵𝘂Ꮍ', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'Rp 0', '901715299202', 'Seabank', 'Yek yagil ', 'Angota'],
+    ['+62 823 5944 5110', '10112534', 'ꜱ͜͡ᴋᴬ ᭼𝐆𝗼𝗱𝗲𝐊', '550', '550', 'Rp 100.000', 'Rp 100.000', 'Rp 39.000', ' $ : Rp 0', 'Rp 6.000', 'Rp 245.000 - CB : Rp 20.000 = Rp 225.000', '901715299202', 'Seabank', 'Yek yagil ', 'Angota'],
 
     
     // BARIS 9 (A11 hingga 11)
