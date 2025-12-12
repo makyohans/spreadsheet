@@ -29,7 +29,7 @@ const COLUMN_WIDTHS = {
  */
 const dataGrid = [
     // BARIS 1 (A1 hingga O1) - HEADER DATA
-    ['NOMOR HP / WA ', 'ID FAYA', 'NAMA FAYA', 'TARGET COIN', 'TARGET DIAMOND', 'RP COIN', 'RP DIAMOND', 'BONUS', 'DOLAR $', 'RP BONUS ROOM SKA', 'CB FAYA SKA', 'TOTAL RP', 'NOMOR REG', 'AKUN REG', 'NAMA REG', 'STATUS FAYA' /* Tambahkan data lainnya hingga kolom Z */],
+    ['NOMOR HP / WA ', 'ID FAYA', 'NAMA FAYA', 'TARGET COIN', 'TARGET DIAMOND', 'RP COIN', 'RP DIAMOND', 'BONUS', 'DOLAR $', 'RP BONUS ROOM SKA', 'CB FAYA SKA (-)', 'TOTAL RP', 'NOMOR REG', 'AKUN REG', 'NAMA REG', 'STATUS FAYA' /* Tambahkan data lainnya hingga kolom Z */],
 
     
     // BARIS 2 (A3 hingga O3)
