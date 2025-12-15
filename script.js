@@ -57,7 +57,7 @@ const dataGrid = [
 
     
     // BARIS 8
-    ['+62 813 7869 6785', '10120993', 'ꜱ͜͡ᴋᴬ ᭼Riska', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'CB SKA : Rp 0', 'Rp 0', '081378696785', 'DANA', 'Riska Novita Sari', 'Angota'],
+    ['+62 813 7869 6785', '10120993', 'ꜱ͜͡ᴋᴬ ᭼Riska', '50.000', '50.000', 'Rp 10.0000', 'Rp 10.000', 'Rp 7.000', ' $ : Rp 0', '0', 'CB SKA : Rp 0', 'Rp 27.000', '081378696785', 'DANA', 'Riska Novita Sari', 'Angota'],
 
     
     // BARIS 9
