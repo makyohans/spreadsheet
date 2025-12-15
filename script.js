@@ -45,7 +45,7 @@ const dataGrid = [
 
     
     // BARIS 5 (A7 hingga 07)
-    ['+62 878 2624 7644', '10065906', 'ꜱ͜͡ᴋᴬ ᭼🍀DuduLLz🍀', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0','CB FAYA SKA', 'Rp 0', '082119792181', 'DANA', 'INEU SETIAWATI', 'Angota'],
+    ['+62 878 2624 7644', '10065906', 'ꜱ͜͡ᴋᴬ ᭼🍀DuduLLz🍀', '550.000', '550.000', 'Rp 100.000', 'Rp 100.000', 'Rp 39.000', ' $ : Rp 0', 'Rp 6.000','CB SKA : Rp 0', 'Rp 245.000', '082119792181', 'DANA', 'INEU SETIAWATI', 'Angota'],
 
     
     // BARIS 6 (A7 hingga 07)
@@ -61,7 +61,7 @@ const dataGrid = [
 
     
     // BARIS 9 (A11 hingga 11)
-    ['+62 812 4683 7174', '10076638', 'ꜱ͜͡ᴋᴬ ᭼Salsa hangeul', '0', '0', 'Rp 0', 'Rp 0', 'Rp 0', ' $ : Rp 0', '0', 'CB FAYA SKA', 'Rp 0', '082276671001', 'GoPay', 'Nur istifadah', 'Super Admin / Rp 2.000'],
+    ['+62 812 4683 7174', '10076638', 'ꜱ͜͡ᴋᴬ ᭼Salsa hangeul', '150.000', '150.000', 'Rp 25.000', 'Rp 25.000', 'Rp 16.000', ' $ : Rp 0', 'Rp 0', 'CB SKA : Rp 0', 'Rp 66.000 + SA : 2.000 + S 3.000 = 71.000', '082276671001', 'GoPay', 'Nur istifadah', 'Super Admin / Rp 2.000'],
 
     
     // BARIS 10 (A12 hingga 12)
