@@ -77,7 +77,7 @@ const dataGrid = [
 
     
     // BARIS 13 (A13 hingga 13)
-    ['+62 812 6470 1180', '10027528', 'ꜱ͜͡ᴋᴬ ᭼buaya cuek', '550.000±', '550.000±', 'Rp 100.000', 'Rp 100.000', 'Rp 39.000', '$ : Rp 0', 'Rp 6.000', 'CB SKA : Rp 0', 'Rp 245.000', '2970638566', 'BCA', 'Liya Fitriani', 'Anggota'],
+    ['+62 812 6470 1180', '10027528', 'ꜱ͜͡ᴋᴬ ᭼buaya cuek', '550.000', '550.000', 'Rp 100.000', 'Rp 100.000', 'Rp 39.000', '$ : Rp 0', 'Rp 6.000', 'CB SKA : Rp 0', 'Rp 245.000', '2970638566', 'BCA', 'Liya Fitriani', 'Anggota'],
 
     
     // BARIS 14 (A14 hingga 14)
